@@ -31,4 +31,15 @@ class MainTest {
     fun vaiFalhar() {
         fail("Não posso terminar os testes sem esse metodo")
     }
+
+    @Test
+    fun assumption() {
+        Assumptions.assumeTrue(countXO("xxooo"))
+        Assertions.assertTrue(abc())
+    }
+
+    @Test
+    fun expection() {
+        assertThrows<NullPointerException> {def()}
+    }
 }
